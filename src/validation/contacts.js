@@ -11,9 +11,7 @@ export const createContactSchema = Joi.object({
     .valid('work', 'home', 'personal')
     .required()
     .default('personal'),
-  userId: Joi.string()
-    .pattern(/^[0-9a-fA-F]{24}$/)
-    .required(),
+  userId: Joi.string().pattern(/^[0-9a-fA-F]{24}$/),
 });
 
 export const updateContactSchema = Joi.object({
