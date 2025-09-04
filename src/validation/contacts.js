@@ -12,6 +12,7 @@ export const createContactSchema = Joi.object({
     .required()
     .default('personal'),
   userId: Joi.string().pattern(/^[0-9a-fA-F]{24}$/),
+  photo: Joi.string().uri().optional(),
 });
 
 export const updateContactSchema = Joi.object({
@@ -20,6 +21,7 @@ export const updateContactSchema = Joi.object({
   email: Joi.string().email(),
   isFavourite: Joi.boolean(),
   contactType: Joi.string().valid('work', 'home', 'personal'),
+  photo: Joi.string().uri(),
 });
 
 export const sortSchema = Joi.object({
