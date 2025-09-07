@@ -12,8 +12,9 @@ tags:
   - name: Auth
     description: Auth operations.
 servers:
-  - url: http://localhost:3000
   - url: https://contacts-app-rmvw.onrender.com
+  - url: http://localhost:3000
+
 paths:
   /contacts:
     get:
